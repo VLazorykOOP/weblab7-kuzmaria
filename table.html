@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таблиця з налаштуванням ширини стовпців</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 70%; /* Встановлює ширину таблиці */
+        margin: auto; /* Центрує таблицю */
+        border: 2px solid #333; /* Зовнішній бордер таблиці */
+      }
+      th,
+      td {
+        border: 2px solid black; /* Бордер для комірок */
+        padding: 8px;
+        text-align: center; /* Вирівнювання тексту по центру */
+      }
+      td {
+        height: 20px; /* Висота рядків */
+      }
+    </style>
+    <nav>
+      <a href="menu.html">Меню сайту</a>
+      <a href="personal-page.html">Особиста Сторінка</a>
+      <a href="pharmacy-page.html">Про Аптеку</a>
+      <a href="product-page.html">Новини</a>
+      <a href="information.html">Інформація</a>
+      <a href="form.html">Форма</a>
+      <a href="table.html">Таблиця</a>
+    </nav>
+  </head>
+ <body>
+    <table id="myTable" class="styledTable" rules="all" cellspacing="0" style="border: 1px solid #000">
+        <caption id="tableCaption" title="Таблиця з ліками в аптеці"></caption>
+        <colgroup id="colGroup" title="Група стовпців">
+            <col style="width: 50px;" />
+            <col style="width: 300px;" />
+            <col style="width: 180px;" />
+            <col style="width: 130px;" />
+            <col style="width: 130px;" />
+            <col style="width: 220px;" />
+            <col style="width: 100px;" />
+        </colgroup>
+      <thead>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <th width="5%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 1">Номер</th>
+          <th width="30%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 2">Вид ліків</th>
+          <th width="18%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 3">Підвид ліків</th>
+          <th width="13%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 4">Наяв. Сх.</th>
+          <th width="13%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 5"> Наяв.Зх</th>
+          <th width="22%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 6">Ціна</th>
+          <th width="1%" rowspan="1" class="header" style="background-color: #f0f0f0" title="Заголовок 7">К-сть продаж.</th>
+        </tr>
+      </thead>
+       <tbody valign="top" style="background-color: #fff;" class="tableBody" lang="uk" dir="ltr"></tbody>
+        <tr bgcolor="#f9f9f9" id="row1" class="dataRow">
+          <td rowspan="2" style="color: #333" dir="ltr" align="center" width="5%">1</td>
+          <td colspan="4" style="color: #333"> Діазолін дитячий ( в наявності немає)</td>
+          <td colspan="2" style="color: #333"> 50 грн</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">Діазолін дорослий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">123</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">78</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">45</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">79.99 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">75</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td rowspan="4" style="color: #333" dir="ltr" align="center" width="5%">2</td>
+          <td rowspan="2" style="color: #333" dir="ltr" align="center" width="5%"> Ібупрофен 5000</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Ібупрофен дитячий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">561</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">265</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">80 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">201</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">Ібупрофен дорослий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">412</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">354</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">85 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%"> 288</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td rowspan="2" style="color: #333" dir="ltr" align="center" width="5%">Ібупрофен 10000</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Ібупрофен дорослий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">342</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">544</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">99 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">115</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">Ібупрофен дитячий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">244</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">122</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">90 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">98</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td rowspan="4" style="color: #333" dir="ltr" align="center" width="5%">3</td>
+          <td rowspan="2" style="color: #333" dir="ltr" align="center" width="5%">Панкреатин 8000</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Дитячий </td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">268</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">234</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">55 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">344</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">Дорослий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">241</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">131</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">60 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">245</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td rowspan="2" style="color: #333" dir="ltr" align="center" width="5%">Панкреатин 16000</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Дорослий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">246</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">134</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">70 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">502</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">Дитячий</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">454</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">198</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">65 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">94</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td style="color: #333" dir="ltr" align="center" width="5%">4</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Септефрил</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">Дарниця</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">854</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">354</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">51 грн</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">795</td>
+        </tr>
+        <tr bgcolor="#f0f0f0" id="headerRow" class="headerRow" style="font-weight: bold">
+          <td colspan="6" style="color: #333" dir="ltr" align="center" width="5%">Загалом: 55185</td>
+          <td style="color: #333" dir="ltr" align="center" width="5%">12584</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

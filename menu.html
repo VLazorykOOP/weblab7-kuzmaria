@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Меню нашого сайту</title>
+    <link rel="stylesheet" href="css/styles2.css" />
+    <script>
+      // Обробники подій
+      function handleLoad() {
+        alert('Сторінку повністю завантажено.');
+      }
+
+      function handleUnload() {
+        alert('Ви залишаєте цю сторінку.');
+      }
+
+      function handleAfterPrint() {
+        alert('Друк завершено.');
+      }
+
+      function handleBeforePrint() {
+        alert('Починається друк.');
+      }
+
+      function handleBeforeUnload() {
+        alert('Завантаження сторінки ще не завершено.');
+      }
+
+      function handleBlur() {
+        alert('Вікно втратило фокус.');
+      }
+
+      function handleError() {
+        alert('Виникла помилка!');
+      }
+
+      function handleFocus() {
+        alert('Вікно отримало фокус.');
+      }
+
+      function handleMessage(event) {
+        alert('Отримано повідомлення: ' + event.data);
+      }
+
+      function handleOffline() {
+        alert('Документ перейшов в автономний режим.');
+      }
+
+      function handleOnline() {
+        alert('Документ підключено до мережі.');
+      }
+
+      function handlePageHide() {
+        alert('Вікно приховано.');
+      }
+
+      function handlePageShow() {
+        alert('Вікно стало видимим.');
+      }
+
+      function handlePopState() {
+        alert('Змінено стан вікна історії.');
+      }
+
+      function handleRedo() {
+        alert('Виконується повтор.');
+      }
+
+      function handleResize() {
+        alert('Розмір вікна змінено.');
+      }
+
+      function handleStorage() {
+        alert('Завантажено дані з локального сховища.');
+      }
+
+      function handleUndo() {
+        alert('Виконано команду скасувати.');
+      }
+    </script>
+  </head>
+  <body
+    onload="handleLoad()"
+    onunload="handleUnload()"
+    onafterprint="handleAfterPrint()"
+    onbeforeprint="handleBeforePrint()"
+    onbeforeunload="handleBeforeUnload()"
+    onblur="handleBlur()"
+    onerror="handleError()"
+    onfocus="handleFocus()"
+    onmessage="handleMessage(event)"
+    onoffline="handleOffline()"
+    ononline="handleOnline()"
+    onpagehide="handlePageHide()"
+    onpageshow="handlePageShow()"
+    onpopstate="handlePopState()"
+    onredo="handleRedo()"
+    onresize="handleResize()"
+    onstorage="handleStorage()"
+    onundo="handleUndo()">
+    <header>
+      <h1>Ласкаво просимо на наш сайт</h1>
+      <p>Виберіть потрібний розділ з меню нижче для подальшого перегляду.</p>
+    </header>
+
+    <nav class="main-menu">
+      <ul>
+        <li><a href="personal-page.html">Про нас</a></li>
+        <li><a href="pharmacy-page.html">Продукція</a></li>
+        <li><a href="product-page.html">Контакти</a></li>
+        <li><a href="information.html">Інформація</a></li>
+        <li><a href="form.html">Форма</a></li>
+        <li><a href="table.html">Таблиця</a></li>
+        <li><a href="form2.html">Форма2</a></li>
+      </ul>
+    </nav>
+
+    <section class="about-us">
+      <p>
+        Ми раді вітати вас на нашому сайті. Ми займаємось виробництвом і реалізацією високоякісної продукції, яка відповідає найвищим стандартам. Наші клієнти є
+        нашими друзями, і ми завжди прагнемо надати їм найкращий сервіс.
+      </p>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Всі права захищені.</p>
+      <p><a href="privacy.html">Політика конфіденційності</a> | <a href="terms.html">Умови користування</a></p>
+    </footer>
+  </body>
+</html>

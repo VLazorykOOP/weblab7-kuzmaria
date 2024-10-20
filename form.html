@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма інформації про аптечні товари</title>
+    <link rel="stylesheet" href="css/styles4.css">
+    <style>
+        body {
+            font-family: Tahoma, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="menu.html">Меню сайту</a>
+        <a href="personal-page.html">Особиста Сторінка</a>
+        <a href="pharmacy-page.html">Про Аптеку</a>
+        <a href="product-page.html">Новини</a>
+        <a href="information.html">Інформація</a>
+        <a href="form.html">Форма</a>
+        <a href="table.html">Таблиця</a>
+        <a href="form2.html">Форма2</a>
+    </nav>
+
+    <h1>Інформація про аптечні товари</h1>
+
+    <audio id="notificationSound" src="sound.mp3"></audio> 
+
+    <form action="submit_product_info.php" method="post" id="pharmacyForm" novalidate name="pharmacyProductForm" accept="application/json">
+        <fieldset lang="uk" style="border: 2px solid #4CAF50;" title="Інформація про аптечний товар">
+            <legend title="Основна інформація" lang="uk" style="font-stretch: condensed;">Основна інформація</legend>
+
+            <label for="productName" id="labelProductName" class="product-label">Назва товару:</label>
+            <input type="text" id="productName" name="productName" maxlength="100" autocomplete="on" placeholder="Наприклад, Аспірин" required formnovalidate><br><br>
+
+            <label for="expirationDate">Дата закінчення терміну придатності:</label>
+            <input type="datetime-local" id="expirationDate" name="expirationDate" max="2025-12-31T23:59" required><br><br>
+
+            <label for="productColor">Колір упаковки:</label>
+            <input type="color" id="productColor" name="productColor" value="#ff0000"><br><br>
+
+            <label for="productURL">Посилання на додаткову інформацію:</label>
+            <input type="url" id="productURL" name="productURL" placeholder="https://example.com"><br><br>
+
+            <label for="manufactureDate">Дата виготовлення:</label>
+            <input type="month" id="manufactureDate" name="manufactureDate" required><br><br>
+
+            <label for="productType">Тип товару:</label>
+            <select id="productType" name="productType">
+                <option value="medicine" label="Ліки" selected dir="ltr">Ліки</option>
+                <option value="vitamins" label="Вітаміни" dir="ltr">Вітаміни</option>
+                <option value="supplements" label="Добавки" dir="ltr">Добавки</option>
+                <option value="equipment" label="Медичне обладнання" dir="ltr">Обладнання</option>
+            </select><br><br>
+
+            <textarea id="description" name="description" class="product-description" placeholder="Введіть опис товару, властивості та рекомендації" required minlength="10" dirname="description.dir" readonly></textarea><br><br>
+
+            <label>Оцінка товару:</label><br>
+            <input type="radio" name="rating" value="excellent" checked> Відмінно<br>
+            <input type="radio" name="rating" value="good"> Добре<br>
+            <input type="radio" name="rating" value="average"> Середньо<br><br>
+
+            <button type="submit" name="submitButton" formenctype="application/x-www-form-urlencoded" autofocus onclick="playNotificationSound()">Відправити</button>
+            <button type="button" name="resetButton" formenctype="multipart/form-data" form="pharmacyForm">Скинути</button>
+            <button type="button" onclick="runTask()">Run Task</button> <!-- Додана кнопка -->
+        </fieldset>
+
+        <progress value="50" max="100" dir="ltr"></progress>
+    </form>
+
+    <textarea id="elementsOutput" rows="10" cols="50" placeholder="Елементи форми з'являться тут..."></textarea> <!-- Текстове поле для виводу -->
+
+    <details lang="uk" class="product-details" open>
+        <summary>Додаткова інформація про товари</summary>
+        <p>Ця форма допомагає зібрати повну інформацію про товари, які продаються в аптеці, включаючи терміни придатності та опис продуктів.</p>
+    </details>
+
+    <output name="formOutput" class="product-output" form="pharmacyForm" lang="uk">Результати заповнення форми будуть тут.</output>
+
+    <fieldset lang="uk" style="border: 1px solid #333;" title="Ключі безпеки">
+        <legend lang="uk" style="font-weight: bold;">Захист даних</legend>
+        <keygen name="securityKey" title="Генератор ключів безпеки" challenge="12345" autofocus disabled>
+    </fieldset>
+
+    <p>Процес заповнення форми триває: <progress value="0.6" max="1" dir="ltr"></progress></p>
+
+    <script>
+        function playNotificationSound() {
+            const audio = document.getElementById('notificationSound');
+            audio.volume = 0.5; 
+            audio.play();
+        }
+
+        function runTask() {
+            const form = document.getElementById('pharmacyForm');
+            let elementsList = "";
+            
+            for (let i = 0; i < form.elements.length; i++) {
+                elementsList += form.elements[i].name + "\n"; // Додає ім'я елемента до списку
+            }
+            
+            // Вивід у текстове поле
+            document.getElementById('elementsOutput').value = elementsList; 
+        }
+    </script>
+</body>
+</html>

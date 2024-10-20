@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    /* Світло-сірий фон */
+    color: #333;
+    /* Темно-сірий текст */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    /* Висота рядка */
+    display: flex;
+    /* Використання флексбоксу */
+    flex-direction: column;
+    /* Вертикальне вирівнювання */
+    align-items: center;
+    /* Центрування по горизонталі */
+}
+
+/* Шапка */
+header {
+    background-color: #4CAF50;
+    /* Зелений фон */
+    color: white;
+    /* Білий текст */
+    text-align: center;
+    /* Центрування тексту */
+    padding: 20px;
+    /* Внутрішній відступ */
+    width: 100%;
+    /* Розтягнення на всю ширину */
+    position: relative;
+    /* Встановлення позиції для розтягнення */
+}
+
+/* Навігація */
+nav {
+    margin-top: 10px;
+    /* Відстань від заголовка */
+}
+
+nav a {
+    color: white;
+    /* Білий текст */
+    text-decoration: none;
+    /* Без підкреслення */
+    margin: 0 15px;
+    /* Відстань між посиланнями */
+}
+
+nav a:hover {
+    text-decoration: underline;
+    /* Підкреслення при наведенні */
+}
+
+/* Головний контент */
+main {
+    padding: 20px;
+    /* Внутрішній відступ */
+    display: flex;
+    /* Використання флексбоксу для вирівнювання */
+    flex-direction: column;
+    /* Вертикальне вирівнювання */
+    align-items: center;
+    /* Центрування по горизонталі */
+}
+
+/* Популярні ліки */
+.product-list {
+    list-style-type: none;
+    /* Без маркерів */
+    padding: 0;
+    /* Без відступів */
+}
+
+.product-image {
+    display: inline-block;
+    /* Відображення в рядок */
+    border: 2px solid #4CAF50;
+    /* Зелена рамка */
+    padding: 10px;
+    /* Внутрішній відступ */
+    margin: 10px;
+    /* Відстань між зображеннями */
+    text-align: center;
+    /* Центрування тексту */
+    background-color: #ffffff;
+    /* Білий фон */
+    border-radius: 8px;
+    /* Заокруглені кути */
+    transition: transform 0.3s;
+    /* Анімація при наведенні */
+}
+
+.product-image:hover {
+    transform: scale(1.05);
+    /* Збільшення при наведенні */
+}
+
+.buy-button {
+    background-color: #4CAF50;
+    /* Зелений фон */
+    color: white;
+    /* Білий текст */
+    border: none;
+    /* Без межі */
+    padding: 10px 15px;
+    /* Внутрішній відступ */
+    border-radius: 5px;
+    /* Заокруглені кути */
+    cursor: pointer;
+    /* Курсор у вигляді руки */
+    margin-top: 10px;
+    /* Відстань від зображення */
+}
+
+.buy-button:hover {
+    background-color: #45a049;
+    /* Темніший зелений фон при наведенні */
+}
+
+/* Інформація про ліки */
+.product-info {
+    margin-top: 20px;
+    /* Відстань від попереднього секції */
+    text-align: center;
+    /* Центрування тексту */
+}
+
+/* Зв'язок з нами */
+.contact-info {
+    margin-top: 20px;
+    /* Відстань від попереднього секції */
+    text-align: center;
+    /* Центрування тексту */
+}
+
+/* Підвал */
+footer {
+    text-align: center;
+    /* Центрування тексту */
+    padding: 10px;
+    /* Внутрішній відступ */
+    background-color: #ccc;
+    /* Світло-сірий фон */
+    width: 100%;
+    /* Розтягнення на всю ширину */
+}

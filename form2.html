@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Пошук інформації</title>
+    <link rel="stylesheet" href="css/styles4.css" />
+    <style>
+      body {
+        font-family: Tahoma, sans-serif;
+        margin: 20px;
+      }
+      textarea {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Пошук інформації в тексті</h1>
+
+    <form id="infoForm" novalidate>
+      <label for="inputText">Введіть текст:</label><br />
+      <textarea id="inputText" name="inputText" rows="4" placeholder="Введіть ваш текст тут..." required></textarea><br />
+
+      <button type="button" onclick="searchInfo()">Пошук інформації</button>
+    </form>
+
+    <h2>Результати:</h2>
+    <pre id="resultOutput"></pre>
+
+    <script>
+      function searchInfo() {
+        const inputText = document.getElementById('inputText').value;
+
+        // Кількість слів
+        const wordsCount = inputText.match(/\b\w+\b/g)?.length || 0;
+
+        // Слова, що починаються на 'г' і закінчуються на 'і'
+        const wordsStartingWithGEndingWithI = inputText.match(/\bг\w*і\b/gi) || [];
+
+        // Кількість цифр
+        const digitsCount = (inputText.match(/\d/g) || []).length;
+
+        // Кількість цілих чисел
+        const wholeNumbersCount = (inputText.match(/\b\d+\b/g) || []).length;
+
+        // Формування результатів
+        const results = `
+            Кількість слів: ${wordsCount}
+            Слова, що починаються на 'г' і закінчуються на 'і': ${wordsStartingWithGEndingWithI.join(', ') || 'немає'}
+            Кількість цифр: ${digitsCount}
+            Кількість цілих чисел: ${wholeNumbersCount}
+            `;
+
+        // Вивід результатів
+        document.getElementById('resultOutput').textContent = results;
+      }
+    </script>
+  </body>
+</html>

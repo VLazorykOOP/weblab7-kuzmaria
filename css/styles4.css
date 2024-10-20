@@ -1,0 +1,144 @@
+body {
+    background-color: #f0f0f5;
+    font-family: Tahoma, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Селектор тегу */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    text-shadow: 2px 2px 5px #aaa;
+    font-weight: 900;
+}
+
+/* Селектор ідентифікатора */
+#pharmacyForm {
+    background-color: #ffffff;
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Селектор класу */
+.product-label {
+    font-variant: small-caps;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Селектори дочірніх елементів */
+form>fieldset {
+    margin: 15px 0;
+    border: none;
+}
+
+/* Селектори нащадків */
+fieldset input[type="text"],
+fieldset input[type="datetime-local"],
+fieldset input[type="color"],
+fieldset input[type="url"],
+fieldset input[type="month"],
+fieldset textarea,
+fieldset select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Атрибутний селектор */
+input[required] {
+    border: 2px solid #4CAF50;
+}
+
+/* Псевдоклас */
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px #4CAF50;
+}
+
+/* Псевдоелемент */
+legend::before {
+    content: "🩺 ";
+    color: #4CAF50;
+}
+
+/* Стиль кнопок */
+button[type="submit"],
+button[type="button"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #45a049;
+}
+
+/* Стиль для <details> */
+.product-details {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.product-details summary {
+    font-weight: bold;
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.product-details p {
+    margin: 10px 0;
+    color: #666;
+}
+
+/* Стиль для <progress> */
+progress {
+    width: 100%;
+    height: 20px;
+}
+
+/* Стиль для <output> */
+.product-output {
+    display: block;
+    background-color: #e7f3e7;
+    padding: 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Стиль для <keygen> */
+fieldset[title="Ключі безпеки"] {
+    background-color: #f0f8ff;
+    border: 1px solid #4CAF50;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.keygen::before {
+    content: "🔑";
+    margin-right: 5px;
+    color: #4CAF50;
+}

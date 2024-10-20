@@ -1,0 +1,217 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Навігація */
+nav {
+    background-color: #4CAF50;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+/* Заголовки */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Псевдокласи */
+h2:lang(en) {
+    color: #007ACC;
+}
+
+p:first-of-type {
+    font-weight: bold;
+}
+
+p:last-child {
+    color: #888;
+}
+
+nav a:link {
+    color: #fff;
+}
+
+nav a:visited {
+    color: #ddd;
+}
+
+ф a:focus {
+    outline: 3px solid #4CAF50;
+}
+
+/* тегів */
+p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/*  класів */
+.page-text {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.final-text {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.additional-info {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* контексту (спадкоємців) */
+nav a:hover {
+    background-color: #45a049;
+}
+
+/* сусідів */
+h1+h2 {
+    border-bottom: 2px solid #4CAF50;
+}
+
+/*  атрибутів */
+a[href="personal-page.html"] {
+    color: #FF5733;
+}
+
+a[href$=".html"] {
+    font-weight: bold;
+}
+
+/* Псевдоелементи */
+p::first-line {
+    font-weight: bold;
+    color: #333;
+}
+
+::selection {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Псевдокласи */
+input:invalid {
+    border: 2px solid red;
+}
+
+/* Позиціонування елементів */
+.display-inline {
+    display: inline;
+}
+
+.display-table {
+    display: table;
+}
+
+.display-none {
+    display: none;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.float-left {
+    float: left;
+}
+
+/* Візуалізація елементів */
+.max-width {
+    max-width: 100%;
+}
+
+.min-height {
+    min-height: 300px;
+}
+
+.vertical-align-super {
+    vertical-align: super;
+}
+
+.vertical-align-text-top {
+    vertical-align: text-top;
+}
+
+/* Границі, рамки та заповнювачі */
+p.reasons {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
+
+.padding-bottom {
+    padding-bottom: 15px;
+}
+
+.border-right-width-thin {
+    border-right-width: thin;
+}
+
+.border-bottom-style-solid {
+    border-bottom-style: solid;
+}
+
+.border-color-green {
+    border-color: green;
+}
+
+/* Видимість та візуальні ефекти */
+.clip-rect {
+    clip: rect(10px, 100px, 50px, 0px);
+}
+
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.visibility-visible {
+    visibility: visible;
+}
+
+overflow-scroll {
+    overflow: scroll;
+}
+
+outline {
+    outline: 2px solid red;
+}

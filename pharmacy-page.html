@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Аптека "Здоров'я"</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      .highlight {
+        background-color: yellow;
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      // Функції обробки подій
+      function handleClick(event) {
+        alert('Ви клікнули на: ' + event.target.tagName);
+        event.target.classList.toggle('highlight'); // Змінюємо стиль
+      }
+
+      function handleDoubleClick(event) {
+        alert('Ви двічі клікнули на: ' + event.target.tagName);
+      }
+
+      function handleMouseOver(event) {
+        event.target.style.color = 'pink'; // Змінюємо колір тексту при наведенні
+      }
+
+      function handleMouseOut(event) {
+        event.target.style.color = ''; // Відновлюємо колір тексту
+      }
+
+      function handleDrop(event) {
+        event.preventDefault();
+        alert('Елемент був скинутий на: ' + event.target.tagName);
+      }
+
+      function allowDrop(event) {
+        event.preventDefault();
+      }
+    </script>
+  </head>
+  <body>
+    <nav>
+      <a href="menu.html">Меню сайту</a>
+      <a href="personal-page.html">Особиста Сторінка</a>
+      <a href="pharmacy-page.html">Про Аптеку</a>
+      <a href="product-page.html">Новини</a>
+      <a href="information.html">Інформація</a>
+      <a href="form.html">Форма</a>
+      <a href="table.html">Таблиця</a>
+      <a href="form2.html">Форма2</a>
+    </nav>
+    <h1 id="header" onclick="handleClick(event)" ondblclick="handleDoubleClick(event)">Про аптеку "Здоров'я"</h1>
+    <div class="container" ondrop="handleDrop(event)" ondragover="allowDrop(event)">
+      <article>
+        <h2 id="about" onclick="handleClick(event)" ondblclick="handleDoubleClick(event)">Про нас</h2>
+        <p id="welcome" onmouseover="handleMouseOver(event)" onmouseout="handleMouseOut(event)" draggable="true" ondragstart="handleDragStart(event)">
+          Ласкаво просимо до нашої аптеки! Ми забезпечуємо вас якісними ліками та медичними засобами для покращення вашого здоров'я.
+        </p>
+        <div class="product-info">
+          <h2 id="services" onclick="handleClick(event)" ondblclick="handleDoubleClick(event)">Наші послуги</h2>
+          <p>Ми пропонуємо широкий спектр медичних препаратів, включаючи рецептурні та безрецептурні ліки, вітаміни, добавки та медичні інструменти.</p>
+          <p>Всі наші препарати мають сертифікати якості та продаються за доступними цінами.</p>
+        </div>
+        <div class="company-info">
+          <h2 id="company" onclick="handleClick(event)" ondblclick="handleDoubleClick(event)">Інформація про компанію</h2>
+          <p>Наша аптека працює на ринку з 2005 року. Ми надаємо високоякісні послуги та дбаємо про здоров'я наших клієнтів.</p>
+          <p>Завітайте до нас за адресою: м. Київ, вул. Лесі Українки, 45.</p>
+        </div>
+      </article>
+    </div>
+    <footer>
+      <address>
+        <p>Контактний телефон: +380 (44) 123-45-67</p>
+        <p>Email: <a href="mailto:info@zdravapotek.com">info@zdravapotek.com</a></p>
+      </address>
+    </footer>
+  </body>
+</html>
